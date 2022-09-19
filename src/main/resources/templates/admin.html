@@ -16,8 +16,8 @@
     <div class="row navbar navbar-dark bg-dark pd-0 pt-0">
         <div class="col">
             <b class="text-white" th:utext="${authorizedUser.username}"></b>
+            <span class="text-white" th:utext="' with roles: '"></span>
             <th:block th:each="role : ${authorizedUser.roles}">
-                <span class="text-white" th:utext="' with roles: '"></span>
                 <span class="text-white" th:utext="${#strings.substringAfter(role.name, 'ROLE_')}"></span>
             </th:block>
         </div>
