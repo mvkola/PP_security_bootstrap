@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return userRepo.findAll();
     }
 
+
     @Override
     public User findUserById(Long id) {
         return userRepo.findById(id).orElseThrow(() ->

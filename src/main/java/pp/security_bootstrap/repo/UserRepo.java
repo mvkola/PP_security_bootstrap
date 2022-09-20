@@ -7,7 +7,7 @@ import pp.security_bootstrap.model.User;
 
 @Repository
 public interface UserRepo extends JpaRepository<User, Long> {
-    @EntityGraph(attributePaths = {"roles"})
-    User findByUsername(String username);
+   @EntityGraph(attributePaths = {"roles"})
+   User findByUsername(String username);
 
 }
